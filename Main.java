@@ -1,22 +1,17 @@
 import java.util.*;
-
 public class Main {
     public static void main(String[] args) {
         Scanner scanNum = new Scanner(System.in);
-        double a, b;
+        double a = scanNum.nextDouble();
+        double b = scanNum.nextDouble();
         while(true) {
-            a = scanNum.nextDouble();
-            b = scanNum.nextDouble();
-            if(Equation.eqnTion(a)*Equation.eqnTion(b)<0) {
-                Bisection.opeRation(a, b);
+            if(Equation.eqTion(a)*Equation.eqTion(b)<0) {
+                FalsePosition.falsePosition(a, b);
                 break;
-
             }
 
             else
-                System.out.println("Enter the right interval please");
-
+                System.out.println("Please enter a valid interval!");
         }
-
     }
 }
